@@ -11,7 +11,7 @@ RUN	useradd --no-log-init --home-dir /var/lib/moonfire-nvr --system --user-group
 ENV	HOME /var/lib/moonfire-nvr
 COPY	--chown=moonfire-nvr:moonfire-nvr . /home/moonfire-nvr/moonfire-nvr
 USER	moonfire-nvr
-WORKDIR /var/lib/moonfire-nvr/moonfire-nvr
+WORKDIR /home/moonfire-nvr/moonfire-nvr
 RUN 	whoami && ls -l && \
 	./scripts/setup-ubuntu.sh && \
 	./scripts/setup-ubuntu.sh && \
